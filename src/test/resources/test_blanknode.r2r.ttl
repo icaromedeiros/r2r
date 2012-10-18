@@ -1,0 +1,21 @@
+# Blank node test mapping
+
+@prefix r2r: <http://www4.wiwiss.fu-berlin.de/bizer/r2r/> .
+@prefix mp: <http://www.example.org/Transformations/> .
+
+mp:BlankNodeExpressions
+   a r2r:ClassMapping;
+	r2r:prefixDefinitions
+		"""rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+		in: <http://www.example.org/input#> .
+		out: <http://www.example.org/output#>""";
+	# ?ex is always a blank node!
+   	r2r:sourcePattern
+   		"""?SUBJ in:expressions ?ex .
+   		?ex a in:Expression .
+   		?ex rdfs:label ?label""";
+   r2r:targetPattern
+   		"""?SUBJ out:hasExpression _:b .
+   		_:b a out:Expression .
+		_:b out:NiceLabel ?label""";
+   .

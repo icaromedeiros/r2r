@@ -1,0 +1,14 @@
+<http://nodomain/source/JohnSmith>
+      <http://www.w3.org/2006/vcard/ns#uri>
+              <http://www.example.com/John%20Smith> .
+
+<http://nodomain/source/JohnDoe>
+      <http://www.w3.org/2006/vcard/ns#uri>
+              <http://www.example.com/John%20Doe> .
+<http://nodomain/source/JohnSmith>
+      <http://www.w3.org/2006/vcard/ns#n>
+              "Smith, John" .
+
+<http://nodomain/source/JohnDoe>
+      <http://www.w3.org/2006/vcard/ns#n>
+              "Doe, John" .

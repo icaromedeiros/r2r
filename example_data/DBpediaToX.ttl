@@ -1,0 +1,614 @@
+@prefix mappings: <http://mappings.dbpedia.org/r2r/> .
+@prefix r2r: <http://www4.wiwiss.fu-berlin.de/bizer/r2r/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# DBpedia - Musicbrainz: relevant mappings
+
+   mappings:dbpediaToMusicbrainzMusicalArtistClass
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a dbpedia-owl:MusicalArtist" ;
+      r2r:targetPattern "?SUBJ a <http://purl.org/ontology/mo/MusicArtist>" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:date "2010-07-01^^xsd:date" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+   mappings:musicbrainzToDBpediaMusicalArtistClass
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a <http://purl.org/ontology/mo/MusicArtist>" ;
+      r2r:targetPattern "?SUBJ a dbpedia-owl:MusicalArtist" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+   mappings:dbpediaMusicalArtistToFoafMakerProperty
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:musicalArtist ?o" ;
+      r2r:targetPattern "?SUBJ foaf:maker ?o" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . foaf: <http://xmlns.com/foaf/0.1/>" ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+   mappings:dbpediaArtistToFoafMadeProperty a r2r:Mapping ;
+      r2r:sourcePattern "?o dbpedia-owl:artist ?SUBJ" ;
+      r2r:targetPattern "?SUBJ foaf:made ?o" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . foaf: <http://xmlns.com/foaf/0.1/>" ;
+      dc:date "2010-06-22"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+
+# DBpedia - Geonames: relevant mappings:
+
+   mappings:geonamesNameToFoafNameProperty
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ geonames:name ?o" ;
+      r2r:targetPattern "?SUBJ foaf:name ?o" ;
+      r2r:prefixDefinitions "foaf: <http://xmlns.com/foaf/0.1/> . geonames: <http://www.geonames.org/ontology/>" ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+   mappings:dbpediaPlaceToGeonamesFeatureClass
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a dbpedia-owl:Place" ;
+      r2r:targetPattern "?SUBJ a geonames:Feature" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . geonames: <http://www.geonames.org/ontology/>" ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> . 
+
+   mappings:dbpediaPopulationTotalToGeonamesPopulationProperty
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:populationTotal ?o" ;
+      r2r:targetPattern "?SUBJ geonames:population ?o" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . geonames: <http://www.geonames.org/ontology/>" ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> . 
+
+   mappings:geonamesPopulationToDBpediaPopulationTotalProperty
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ geonames:population ?o" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:populationTotal ?o" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . geonames: <http://www.geonames.org/ontology/>" ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> . 
+
+   mappings:geonamesPostalCodeToDBpediaPostalCodeProperty
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ geonames:postalCode ?o" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:postalCode ?o" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . geonames: <http://www.geonames.org/ontology/>" ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> . 
+
+   mappings:dbpediaPostalCodeToGeonamesPostalCodeProperty
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:postalCode ?o" ;
+      r2r:targetPattern "?SUBJ geonames:postalCode ?o" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . geonames: <http://www.geonames.org/ontology/>" ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> . 
+
+# Factbook - DBpedia
+
+   mappings:factbookLatitudeToDBpediaGeoLatitudeProperty
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ factbook:geographiccoordinates_latitude ?o" ;
+      r2r:targetPattern "?SUBJ geo:lat ?'o'^^xsd:float" ;
+      r2r:prefixDefinitions "geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> . factbook: <http://www4.wiwiss.fu-berlin.de/factbook/ns#>" ;
+      r2r:sourceDataset mappings:factbookVOID ;
+      r2r:targetDataset mappings:dbpediaVOID ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> . 
+
+   mappings:DBpediaGeoLatitudeToFactbookLatitudeProperty
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ geo:lat ?o" ;
+      r2r:targetPattern "?SUBJ factbook:geographiccoordinates_latitude ?'o'^^xsd:double" ;
+      r2r:prefixDefinitions "geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> . factbook: <http://www4.wiwiss.fu-berlin.de/factbook/ns#>" ;
+      r2r:sourceDataset mappings:dbpediaVOID ;
+      r2r:targetDataset mappings:factbookVOID ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+   mappings:factbookLongitudeToDBpediaGeoLongitudeProperty
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ factbook:geographiccoordinates_longitude ?o" ;
+      r2r:targetPattern "?SUBJ geo:long ?'o'^^xsd:float" ;
+      r2r:prefixDefinitions "geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> . factbook: <http://www4.wiwiss.fu-berlin.de/factbook/ns#>" ;
+      r2r:sourceDataset mappings:factbookVOID ;
+      r2r:targetDataset mappings:dbpediaVOID ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> . 
+
+   mappings:DBpediaGeoLongitudeToFactbookLongitudeProperty
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ geo:long ?o" ;
+      r2r:targetPattern "?SUBJ factbook:geographiccoordinates_longitude ?'o'^^xsd:double" ;
+      r2r:prefixDefinitions "geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> . factbook: <http://www4.wiwiss.fu-berlin.de/factbook/ns#>" ;
+      r2r:sourceDataset mappings:dbpediaVOID ;
+      r2r:targetDataset mappings:factbookVOID ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+   mappings:factbookNameToFoafNameProperty
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ factbook:name ?o" ;
+      r2r:targetPattern "?SUBJ foaf:name ?o" ;
+      r2r:prefixDefinitions "factbook: <http://www4.wiwiss.fu-berlin.de/factbook/ns#> . foaf: <http://xmlns.com/foaf/0.1/>" ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+   mappings:dbpediaToFactbookCountryClass
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a dbpedia-owl:Country" ;
+      r2r:targetPattern "?SUBJ a factbook:Country" ;
+      r2r:prefixDefinitions "factbook: <http://www4.wiwiss.fu-berlin.de/factbook/ns#> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+   mappings:factbookToDBpediaCountryClass
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a factbook:Country" ;
+      r2r:targetPattern "?SUBJ a dbpedia-owl:Country" ;
+      r2r:prefixDefinitions "factbook: <http://www4.wiwiss.fu-berlin.de/factbook/ns#> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:date "2010-07-01"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+   mappings:dbpediaToFactbookCapitalName a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:capital ?capital . ?capital foaf:name ?capitalName" ;
+      r2r:targetPattern "?SUBJ factbook:capital_name ?capitalName" ;
+      r2r:prefixDefinitions "factbook: <http://www4.wiwiss.fu-berlin.de/factbook/ns#> . dbpedia-owl: <http://dbpedia.org/ontology/> . foaf: <http://xmlns.com/foaf/0.1/>" ;
+      dc:date "2010-06-22"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+   mappings:factbookToDBpediaAreaWaterPercentage a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ factbook:area_total ?total . ?SUBJ factbook:area_water ?water" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:percentageOfAreaWater ?'percentWater'^^xsd:float" ;
+      r2r:transformation "?percentWater = ?water / ?total * 100" ;
+      r2r:prefixDefinitions "factbook: <http://www4.wiwiss.fu-berlin.de/factbook/ns#> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:date "2010-06-22"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+   mappings:DBpediaToFactbookLeaderName a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:leaderName ?leader . ?leader foaf:name ?name" ;
+      r2r:targetPattern "?SUBJ factbook:executivebranch_headofgovernment ?name" ;
+      r2r:prefixDefinitions "factbook: <http://www4.wiwiss.fu-berlin.de/factbook/ns#> . dbpedia-owl: <http://dbpedia.org/ontology/> . foaf: <http://xmlns.com/foaf/0.1/>" ;
+      dc:date "2010-06-22"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+
+# Book Mashup mappings
+
+   mappings:dbpediaAuthorToDcCreator a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:author ?author" ;
+      r2r:targetPattern "?SUBJ dc:creator ?author" ;
+      r2r:prefixDefinitions "dc: <http://purl.org/dc/elements/1.1/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:date "2010-07-04"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .   
+
+   mappings:bookmashupSkosSubjectToDBpediaGenre a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ skos:subject ?genre . ?SUBJ a bm:Book" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:genre ?genre" ;
+      r2r:prefixDefinitions "skos: <http://www.w3.org/2004/02/skos/core#> . dbpedia-owl: <http://dbpedia.org/ontology/> . bm: <http://sites.wiwiss.fu-berlin.de/suhl/bizer/bookmashup/simpleCommerceVocab01.rdf#>" ;
+	  r2r:sourceDataset mappings:bookmashupVOID ;
+      dc:date "2010-07-04"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .   
+
+	mappings:bookmashupToDbpediaBook
+      a r2r:Mapping ;
+		r2r:sourcePattern "?SUBJ a bm:Book" ;
+      r2r:targetPattern "?SUBJ a dbpedia-owl:Book" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . bm: <http://sites.wiwiss.fu-berlin.de/suhl/bizer/bookmashup/simpleCommerceVocab01.rdf#>" ;
+      dc:date "2010-07-04"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .
+      
+	mappings:dbpediaToBookmashupBook
+      a r2r:Mapping ;
+		r2r:sourcePattern "?SUBJ a dbpedia-owl:Book" ;
+      r2r:targetPattern "?SUBJ a bm:Book" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . bm: <http://sites.wiwiss.fu-berlin.de/suhl/bizer/bookmashup/simpleCommerceVocab01.rdf#>" ;
+      dc:date "2010-07-04"^^xsd:date ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> .   
+
+   mappings:dbpediaISBNToBookMashupIdentifier
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:isbn ?isbn" ;
+      r2r:targetPattern "?SUBJ dc:identifier ?<id>" ;
+      r2r:transformation "?id=concat('urn:ISBN:', replaceAll('-', '', ?isbn))" ;
+      r2r:sourceDataset mappings:dbpediaVOID ;
+      r2r:targetDataset mappings:bookmashupVOID;
+      r2r:prefixDefinitions "dc: <http://purl.org/dc/elements/1.1/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+
+   mappings:dbpediaMediatypeToDcFormat
+      a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:mediaType ?type . ?type rdfs:label ?mediaType" ;
+      r2r:targetPattern "?SUBJ dc:format ?'mediaType'" ;
+      r2r:prefixDefinitions "dc: <http://purl.org/dc/elements/1.1/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+
+   mappings:dbpediaToDcPublisherName a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:publisher ?publisher . ?publisher rdfs:label ?publisherName" ;
+      r2r:targetPattern "?SUBJ dc:publisher ?publisherName" ;
+      r2r:prefixDefinitions "dc: <http://purl.org/dc/elements/1.1/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+
+# Gutenberg
+
+     mappings:gutenbergFoafNameToDBpediaFoafGivennameAndSurname a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ foaf:name ?name" ;
+      r2r:targetPattern "?SUBJ foaf:surname ?'surname'@en" ;
+      r2r:targetPattern "?SUBJ foaf:givenname ?'givenname'@en" ;
+      r2r:transformation "?surname = getByIndex(split(',', ?name), 0)" ;
+      r2r:transformation "?givenname = getByIndex(split(',', ?name), 1)" ;
+      r2r:sourceDataset mappings:gutenbergVOID ;
+      r2r:targetDataset mappings:dbpediaVOID ;
+      r2r:prefixDefinitions "foaf: <http://xmlns.com/foaf/0.1/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+
+# US Census:     http://www.rdfabout.com/rdf/usgov/geo/us/ia/counties/delaware_county
+
+    mappings:uscensusToDbpediaPopulation a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ <http://www.rdfabout.com/rdf/schema/census/population> ?pop" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:populationTotal ?'pop'^^xsd:integer" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      r2r:targetDataset mappings:dbpediaVOID ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+
+    mappings:uscensusToDBpediaAreaWater a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ <http://www.rdfabout.com/rdf/schema/census/waterArea> ?areaString" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:areaWater ?'area'^^xsd:double" ;
+      r2r:transformation "?area = getByIndex(split(' ', ?areaString), 0)" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date ;
+      r2r:sourceDataset mappings:uscensusVOID .
+
+    mappings:dbpediaToUScensusWaterArea a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:areaWater ?area" ;
+      r2r:targetPattern "?SUBJ <http://www.rdfabout.com/rdf/schema/census/waterArea> ?areaString" ;
+      r2r:transformation "?areaString = concat(integer(?area), ' m^2')" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date ;
+      r2r:targetDataset mappings:uscensusVOID .
+
+    mappings:uscensusToDBpediaLandArea a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ <http://www.rdfabout.com/rdf/schema/census/landArea> ?areaString" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:areaLand ?'area'^^xsd:double" ;
+      r2r:transformation "?area = getByIndex(split(' ', ?areaString), 0)" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date ;
+      r2r:sourceDataset mappings:uscensusVOID .
+
+    mappings:dbpediaToUScensusLandArea a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:areaLand ?area" ;
+      r2r:targetPattern "?SUBJ <http://www.rdfabout.com/rdf/schema/census/landArea> ?areaString" ;      
+      r2r:transformation "?areaString = concat(integer(?area), ' m^2')" ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date ;
+      r2r:targetDataset mappings:uscensusVOID .
+
+# Dailymed:
+
+   mappings:dailymedToDBpediaProductProperty a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/producesDrug> ?p" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:product ?p" ;      
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+      
+   mappings:dailymedToDBpediaOrganisationClass a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/Organization>" ;
+      r2r:targetPattern "?SUBJ a dbpedia-owl:Organisation" ;      
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+      
+   mappings:dbpediaToDailymedOrganisationClass a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a dbpedia-owl:Organisation" ;
+      r2r:targetPattern "?SUBJ a <http://www4.wiwiss.fu-berlin.de/dailymed/resource/dailymed/Organization>" ;      
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .  
+
+# Diseasome:     
+
+   mappings:dbpediaToDiseasomeDiseaseClass a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a dbpedia-owl:Disease" ;
+      r2r:targetPattern "?SUBJ a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases>" ;      
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .  
+      
+   mappings:diseasomeToDBpediaDiseaseClass a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases>" ;
+      r2r:targetPattern "?SUBJ a dbpedia-owl:Disease" ;      
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .  
+      
+   mappings:diseasomeToFoafName a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?o" ;
+      r2r:targetPattern "?SUBJ foaf:name ?o" ;      
+      r2r:prefixDefinitions "foaf: <http://xmlns.com/foaf/0.1/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .  
+
+     mappings:omimMapping a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ diseasome:omim ?omimURI" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:omim ?'dbpediaOmim'^^xsd:integer" ;
+      r2r:prefixDefinitions "diseasome: <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      r2r:transformation "?dbpediaOmim = getByIndex(split(':', ?omimURI), 2)" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date ;
+      r2r:sourceDataset mappings:diseaseSomeVOID .
+
+
+# Linkedmdb
+
+   mappings:linkedmdbToDBpediaFilm a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a linkedmdb:film" ;
+      r2r:targetPattern "?SUBJ a dbpedia-owl:Film" ;      
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .
+      
+   mappings:dbpediaToLinkedmdbFilm a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a dbpedia-owl:Film" ;
+      r2r:targetPattern "?SUBJ a linkedmdb:film" ;      
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .  
+      
+   mappings:dbpediaStarringToLinkedmdbactor a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:starring ?o" ;
+      r2r:targetPattern "?SUBJ linkedmdb:actor ?o" ;      
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .  
+      
+   mappings:linkedmdbToDBpediaDirectorProperty a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ linkedmdb:director ?d" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:director ?d" ;      
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .
+      
+   mappings:dbpediaToLinkedmdbDirectorProperty a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:director ?d" ;
+      r2r:targetPattern "?SUBJ linkedmdb:director ?d" ;      
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .  
+
+   mappings:linkedmdbToDBpediaProducerProperty a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ linkedmdb:producer ?d" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:producer ?d" ;      
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .
+      
+   mappings:dbpediaToLinkedmdbProducerProperty a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:producer ?d" ;
+      r2r:targetPattern "?SUBJ linkedmdb:producer ?d" ;      
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date . 
+      
+   mappings:linkedmdbToDBpediaEditorProperty a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ linkedmdb:editor ?d" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:editing ?d" ;      
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .
+      
+   mappings:dbpediaToLinkedmdbEditorProperty a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:editing ?d" ;
+      r2r:targetPattern "?SUBJ linkedmdb:editor ?d" ;      
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date . 
+
+   mappings:linkedmdbToDBpediaWriterProperty a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ linkedmdb:writer ?d" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:writer ?d" ;      
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .
+      
+   mappings:dbpediaToLinkedmdbWriterProperty a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:writer ?d" ;
+      r2r:targetPattern "?SUBJ linkedmdb:writer ?d" ;      
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date . 
+
+   mappings:dbpediaToLinkedmdbRuntime a r2r:Mapping ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . movie: <http://data.linkedmdb.org/resource/movie/>" ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:runtime ?runtimeInSeconds" ;
+      r2r:targetPattern "?SUBJ movie:runtime ?runtimeInMinutes" ;
+      r2r:transformation "?runtimeInMinutes = integer(?runtimeInSeconds / 60)" ;
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date ;
+      r2r:targetDataset mappings:linkedmdbVOID .
+
+### For testing "mapping chaining" this mapping doesn't exist ;)
+#
+#   mappings:linkedmdbToDBpediaRuntime a r2r:Mapping ;
+#      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . movie: <http://data.linkedmdb.org/resource/movie/>" ;
+#      r2r:sourcePattern "?SUBJ movie:runtime ?runtimeInMinutes" ;
+#      r2r:targetPattern "?SUBJ dbpedia-owl:runtime ?'runtimeInSeconds'^^xsd:double" ;
+#      r2r:transformation "?runtimeInSeconds = ?runtimeInMinutes * 60" ;
+#      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+#      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+#      dc:date "2010-06-22"^^xsd:date ;
+#      r2r:sourceDataset mappings:linkedmdbVOID.
+
+   mappings:linkedmdbToDBpediaDistributorProperty a r2r:Mapping ;
+      r2r:sourcePattern "?distributor linkedmdb:film_of_distributor ?SUBJ" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:distributor ?distributor" ;
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+      
+   mappings:dbpediaToLinkedmdbDistributorProperty a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:distributor ?distributor" ;
+      r2r:targetPattern "?distributor linkedmdb:film_of_distributor ?SUBJ" ;
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+           
+
+# Drugbank:      
+
+   mappings:drugbankToDBpediaCasNumberProperty a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ drugbank:casRegistryNumber ?casNrURI" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:casNumber ?casNr" ;
+      r2r:transformation "?casNr = getByIndex(split(':', ?casNrURI), 2)" ;
+      r2r:prefixDefinitions "drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date ;
+      r2r:sourceDataset mappings:drugbankVOID .
+
+   mappings:atcCode a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:atcPrefix ?prefix . ?SUBJ dbpedia-owl:atcSuffix ?suffix" ;
+      r2r:targetPattern "?SUBJ drugbank:atcCode ?code" ;
+      r2r:transformation "?code = concat(?prefix, ?suffix)" ;
+      r2r:prefixDefinitions "drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+
+# Freebase: MusicalArtist
+
+   mappings:dbpediaToFreebaseMusicalArtistClass a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a dbpedia-owl:MusicalArtist" ;
+      r2r:targetPattern "?SUBJ a fb:music.artist" ;
+      r2r:prefixDefinitions "fb: <http://rdf.freebase.com/ns/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .
+    
+   mappings:freebaseToDBpediaMusicalArtistClass a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ a fb:music.artist" ;
+      r2r:targetPattern "?SUBJ a dbpedia-owl:MusicalArtist" ;
+      r2r:prefixDefinitions "fb: <http://rdf.freebase.com/ns/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .
+  
+   mappings:dbpediaToFreebasePlaceOfBirth a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:birthPlace ?o" ;
+      r2r:targetPattern "?SUBJ fb:people.person.place_of_birth ?o" ;
+      r2r:prefixDefinitions "fb: <http://rdf.freebase.com/ns/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .
+      
+   mappings:freebaseToDBpediaBirthPlace a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ fb:people.person.place_of_birth ?o" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:birthPlace ?o" ;
+      r2r:prefixDefinitions "fb: <http://rdf.freebase.com/ns/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date . 
+      
+   mappings:freebaseToDBpediaDeathPlace a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ fb:people.deceased_person.place_of_death ?o" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:deathPlace ?o" ;
+      r2r:prefixDefinitions "fb: <http://rdf.freebase.com/ns/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .  
+
+   mappings:dbpediaToFreebasePlaceOfDeath a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:deathPlace ?o" ;
+      r2r:targetPattern "?SUBJ fb:people.deceased_person.place_of_death ?o" ;
+      r2r:prefixDefinitions "fb: <http://rdf.freebase.com/ns/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .
+      
+   mappings:freebaseToDBpediaInstrumentProperty a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ fb:music.group_member.instruments_played ?o" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:instrument ?o" ;
+      r2r:prefixDefinitions "fb: <http://rdf.freebase.com/ns/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .  
+
+   mappings:dbpediaToFreebaseInstrumentsPlayed a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:instrument ?o" ;
+      r2r:targetPattern "?SUBJ fb:music.group_member.instruments_played ?o" ;
+      r2r:prefixDefinitions "fb: <http://rdf.freebase.com/ns/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date .
+    
+   mappings:freebaseArtistGenreToDBpediaGenre a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ fb:music.artist.genre ?o" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:genre ?o" ;
+      r2r:prefixDefinitions "fb: <http://rdf.freebase.com/ns/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-07-03"^^xsd:date . 
+      
+   mappings:freebaseAlbum a r2r:Mapping ;
+      r2r:sourcePattern "?artist fb:music.artist.album ?SUBJ" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:artist ?artist" ;
+      r2r:prefixDefinitions "fb: <http://rdf.freebase.com/ns/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+
+     mappings:deathDate a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ fb:people.deceased_person.date_of_death ?date" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:deathDate ?'date'^^xsd:date" ;
+      r2r:prefixDefinitions "fb: <http://rdf.freebase.com/ns/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+
+     mappings:birthDate a r2r:Mapping ;
+      r2r:sourcePattern "?SUBJ fb:people.person.date_of_birth ?date" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:birthDate ?'date'^^xsd:date" ;
+      r2r:prefixDefinitions "fb: <http://rdf.freebase.com/ns/> . dbpedia-owl: <http://dbpedia.org/ontology/>" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+
+         
+# Freebase: Film
+
+   mappings:freebaseToDBpediaRuntime
+      a r2r:Mapping ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . fb: <http://rdf.freebase.com/ns/>" ;
+      r2r:sourcePattern "?SUBJ fb:film.film.runtime ?ro . ?ro fb:film.film_cut.runtime ?runtimeInMinutes" ;
+      r2r:targetPattern "?SUBJ dbpedia-owl:runtime ?'runtimeInSeconds'^^xsd:double" ;
+      r2r:transformation "?runtimeInSeconds = ?runtimeInMinutes * 60" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+ 
+   mappings:dbpediaToFreebaseRuntime
+      a r2r:Mapping ;
+      r2r:prefixDefinitions "dbpedia-owl: <http://dbpedia.org/ontology/> . fb: <http://rdf.freebase.com/ns/>" ;
+      r2r:sourcePattern "?SUBJ dbpedia-owl:runtime ?runtime" ;
+      r2r:targetPattern "?SUBJ fb:film.film.runtime ?generatedURI fb:film.film_cut.runtime ?'runtime'^^xsd:float" ;
+      r2r:transformation "?generatedURI = concat(?SUBJ, 'Runtime')" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+	  
+# Freebase - Linkedmdb: Film
+
+   mappings:freebaseToLinkedmdbRuntime
+      a r2r:Mapping ;
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . fb: <http://rdf.freebase.com/ns/>" ;
+      r2r:sourcePattern "?SUBJ fb:film.film.runtime ?ro . ?ro fb:film.film_cut.runtime ?runtimeInMinutes" ;
+      r2r:targetPattern "?SUBJ linkedmdb:runtime ?'runtimeInMinutes'" ;
+      r2r:targetDataset mappings:linkedmdbVOID ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date .
+ 
+   mappings:linkedmdbToFreebaseRuntime
+      a r2r:Mapping ;
+      r2r:prefixDefinitions "linkedmdb: <http://data.linkedmdb.org/resource/movie/> . fb: <http://rdf.freebase.com/ns/>" ;
+      r2r:sourcePattern "?SUBJ linkedmdb:runtime ?runtime" ;
+      r2r:targetPattern "?SUBJ fb:film.film.runtime ?generatedURI fb:film.film_cut.runtime ?'runtime'^^xsd:float" ;
+      r2r:transformation "?generatedURI = concat(?SUBJ, 'Runtime')" ;
+      dc:creator <http://www4.wiwiss.fu-berlin.de/is-group/resource/persons/Person30> ;
+      dc:date "2010-06-22"^^xsd:date ;
+	  r2r:sourceDataset mappings:linkedmdbVOID.

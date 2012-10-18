@@ -1,0 +1,11 @@
+To execute the example programs type:
+
+./run de.fuberlin.wiwiss.r2r.examples.Example1
+
+./run de.fuberlin.wiwiss.r2r.examples.Example2
+
+./run de.fuberlin.wiwiss.r2r.examples.Example3
+
+./run de.fuberlin.wiwiss.r2r.examples.Example4
+
+Under Windows replace "./run" with "run".

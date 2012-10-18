@@ -1,0 +1,17 @@
+@prefix r2r: <http://www4.wiwiss.fu-berlin.de/bizer/r2r/> .
+@prefix mp: <http://www.example.org/Transformations/> .
+@prefix in: <http://www.example.org/input> .
+@prefix out: <http://www.example.org/output> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.org/data> .
+
+:Node a in:TestCase;
+	in:expressions
+		[
+			a in:Expression;
+			rdfs:label "Expression1";
+		],
+		[
+			a in:Expression;
+			rdfs:label "Expression2";
+		] .

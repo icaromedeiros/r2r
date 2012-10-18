@@ -1,0 +1,28 @@
+@prefix r2r: <http://www4.wiwiss.fu-berlin.de/bizer/r2r/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix movie: <http://data.linkedmdb.org/resource/movie/> .
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Made up Mapping publisher
+@prefix mp: <http://www4.wiwiss.fu-berlin.de/R2Rmappings/> .
+
+# Mappings from DBpedia to FOAF Person and rdfs:label (from DBpedia) to foaf:name
+
+# Some XPath based mappings
+mp:concatFirstAndLastNameMappingXPath
+   a r2r:PropertyMapping ;
+   r2r:sourcePattern "?SUBJ foaf:firstName ?f . ?SUBJ foaf:lastName ?l" ;
+   r2r:targetPattern "?SUBJ v:n ?name" ;
+   r2r:transformation "?name = xpath_concat(?l, ', ', ?f)" ; # Concatenate the first and last name seperated by a comma+space.
+   r2r:prefixDefinitions "foaf: <http://xmlns.com/foaf/0.1/> . v: <http://www.w3.org/2006/vcard/ns#>" .
+
+mp:concatNamesAndConvertXPath
+    a r2r:PropertyMapping ;
+   r2r:sourcePattern "?SUBJ foaf:firstName ?f . ?SUBJ foaf:lastName ?l" ;
+   r2r:targetPattern "?SUBJ v:uri ?<name>" ;
+   r2r:transformation "?name = xpath_concat('http://www.example.com/', xpath_encode_for_uri(xpath_concat(?f, ' ', ?l)))" ; # Concatenate the first and last name seperated by a comma+space.
+   r2r:prefixDefinitions "foaf: <http://xmlns.com/foaf/0.1/> . v: <http://www.w3.org/2006/vcard/ns#>" .

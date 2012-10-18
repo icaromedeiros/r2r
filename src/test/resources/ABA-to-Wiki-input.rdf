@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:brain="http://brain-map.org/gene/0.1#"
+         xml:base="http://www.unknown.com/ABA-to-Wiki-input.rdf">
+   <brain:gene rdf:about="http://brain-map.org/mouse/brain/Ace.xml">
+      <brain:chromosome>11</brain:chromosome>
+      <brain:entrezgeneid>11421</brain:entrezgeneid>
+      <brain:geneid>11210</brain:geneid>
+      <brain:genename>angiotensin I converting enzyme (peptidyl-dipeptidase A) 1</brain:genename>
+      <brain:genesymbol>Ace</brain:genesymbol>
+
+      <brain:gensatid>G02651</brain:gensatid>
+      <brain:mgimarkeraccessionid>MGI:87874</brain:mgimarkeraccessionid>
+      <brain:organism>Mouse</brain:organism>
+      <brain:projectname>0310</brain:projectname>
+      <brain:image-series>
+         <brain:image-series>
+            <brain:age>55</brain:age>
+
+            <brain:createdate>05/24/2008</brain:createdate>
+            <brain:geneid>11210</brain:geneid>
+            <brain:imageseriesdisplayname>Ace-Sagittal-05-2094</brain:imageseriesdisplayname>
+            <brain:imageseriesid>70919310</brain:imageseriesid>
+            <brain:ncbiaccessionnumber>TC1559728</brain:ncbiaccessionnumber>
+            <brain:plane>sagittal</brain:plane>
+
+            <brain:probeorientation>antisense</brain:probeorientation>
+            <brain:projectname>0310</brain:projectname>
+            <brain:riboprobename>RP_050713_01_A12</brain:riboprobename>
+            <brain:sex>M</brain:sex>
+            <brain:specimenid>05-2094</brain:specimenid>
+            <brain:strain>C57BL/6J</brain:strain>
+
+            <brain:templateid>154702</brain:templateid>
+            <brain:transcriptgi>-2026</brain:transcriptgi>
+            <brain:transcriptid>77098</brain:transcriptid>
+            <brain:transcriptname/>
+            <brain:treatmenttype>ISH</brain:treatmenttype>
+         </brain:image-series>
+      </brain:image-series>
+
+      <brain:image-series>
+         <brain:image-series>
+            <brain:age>55</brain:age>
+            <brain:createdate>05/30/2008</brain:createdate>
+            <brain:geneid>11210</brain:geneid>
+            <brain:imageseriesdisplayname>Ace-Sagittal-04-0913</brain:imageseriesdisplayname>
+            <brain:imageseriesid>68498226</brain:imageseriesid>
+
+            <brain:ncbiaccessionnumber>NM_009598</brain:ncbiaccessionnumber>
+            <brain:plane>sagittal</brain:plane>
+            <brain:probeorientation>antisense</brain:probeorientation>
+            <brain:projectname>0310</brain:projectname>
+            <brain:riboprobename>RP_050113_01_E10</brain:riboprobename>
+            <brain:sex>M</brain:sex>
+
+            <brain:specimenid>04-0913</brain:specimenid>
+            <brain:strain>C57BL/6J</brain:strain>
+            <brain:templateid>25886</brain:templateid>
+            <brain:transcriptgi>33468872</brain:transcriptgi>
+            <brain:transcriptid>8249</brain:transcriptid>
+            <brain:transcriptname/>
+
+            <brain:treatmenttype>ISH</brain:treatmenttype>
+         </brain:image-series>
+      </brain:image-series>
+      <brain:image-series>
+         <brain:image-series>
+            <brain:age>55</brain:age>
+            <brain:createdate>06/03/2008</brain:createdate>
+
+            <brain:geneid>11210</brain:geneid>
+            <brain:imageseriesdisplayname>Ace-Coronal-05-3096</brain:imageseriesdisplayname>
+            <brain:imageseriesid>73512499</brain:imageseriesid>
+            <brain:ncbiaccessionnumber>NM_009598</brain:ncbiaccessionnumber>
+            <brain:plane>coronal</brain:plane>
+            <brain:probeorientation>antisense</brain:probeorientation>
+
+            <brain:projectname>0310</brain:projectname>
+            <brain:riboprobename>RP_051017_02_D10</brain:riboprobename>
+            <brain:sex>M</brain:sex>
+            <brain:specimenid>05-3096</brain:specimenid>
+            <brain:strain>C57BL/6J</brain:strain>
+            <brain:templateid>25886</brain:templateid>
+
+            <brain:transcriptgi>33468872</brain:transcriptgi>
+            <brain:transcriptid>8249</brain:transcriptid>
+            <brain:transcriptname/>
+            <brain:treatmenttype>ISH</brain:treatmenttype>
+         </brain:image-series>
+      </brain:image-series>
+      <brain:image-series>
+
+         <brain:image-series>
+            <brain:age>55</brain:age>
+            <brain:createdate>06/03/2008</brain:createdate>
+            <brain:geneid>11210</brain:geneid>
+            <brain:imageseriesdisplayname>Ace-Coronal-05-2970</brain:imageseriesdisplayname>
+            <brain:imageseriesid>72109489</brain:imageseriesid>
+
+            <brain:ncbiaccessionnumber>TC1559728</brain:ncbiaccessionnumber>
+            <brain:plane>coronal</brain:plane>
+            <brain:probeorientation>antisense</brain:probeorientation>
+            <brain:projectname>0310</brain:projectname>
+            <brain:riboprobename>RP_050713_01_A12</brain:riboprobename>
+            <brain:sex>M</brain:sex>
+
+            <brain:specimenid>05-2970</brain:specimenid>
+            <brain:strain>C57BL/6J</brain:strain>
+            <brain:templateid>154702</brain:templateid>
+            <brain:transcriptgi>-2026</brain:transcriptgi>
+            <brain:transcriptid>77098</brain:transcriptid>
+            <brain:transcriptname/>
+
+            <brain:treatmenttype>ISH</brain:treatmenttype>
+         </brain:image-series>
+      </brain:image-series>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+            <brain:avgdensity>7.05035448074341</brain:avgdensity>
+            <brain:avglevel>11.7277841567993</brain:avglevel>
+
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#f0ffa0</brain:rgb>
+            <brain:structureid>63</brain:structureid>
+            <brain:structurelabel>CB</brain:structurelabel>
+            <brain:structurename>Cerebellum</brain:structurename>
+
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+            <brain:avgdensity>3.5120085477829</brain:avgdensity>
+            <brain:avglevel>4.00683224201202</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#b0ffb8</brain:rgb>
+            <brain:structureid>85</brain:structureid>
+            <brain:structurelabel>CTX</brain:structurelabel>
+            <brain:structurename>Cerebral cortex</brain:structurename>
+         </brain:gene-expression>
+
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+            <brain:avgdensity>4.85425996780396</brain:avgdensity>
+            <brain:avglevel>6.25245654582977</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+
+            <brain:rgb>#79ff80</brain:rgb>
+            <brain:structureid>134</brain:structureid>
+            <brain:structurelabel>HIP</brain:structurelabel>
+            <brain:structurename>Hippocampal region</brain:structurename>
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+
+         <brain:gene-expression>
+            <brain:avgdensity>5.26685261726379</brain:avgdensity>
+            <brain:avglevel>5.64266782999039</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#90ffb0</brain:rgb>
+
+            <brain:structureid>135</brain:structureid>
+            <brain:structurelabel>HPF</brain:structurelabel>
+            <brain:structurename>Hippocampal formation</brain:structurename>
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+
+            <brain:avgdensity>4.57028555870056</brain:avgdensity>
+            <brain:avglevel>4.68726229667664</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#ff5050</brain:rgb>
+            <brain:structureid>136</brain:structureid>
+
+            <brain:structurelabel>HY</brain:structurelabel>
+            <brain:structurename>Hypothalamus</brain:structurename>
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+            <brain:avgdensity>2.70178747177124</brain:avgdensity>
+
+            <brain:avglevel>6.09832751750946</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#a0efe8</brain:rgb>
+            <brain:structureid>175</brain:structureid>
+            <brain:structurelabel>LSX</brain:structurelabel>
+
+            <brain:structurename>Lateral septal complex</brain:structurename>
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+            <brain:avgdensity>3.5988450050354</brain:avgdensity>
+            <brain:avglevel>4.3229718208313</brain:avglevel>
+
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#ffb0ff</brain:rgb>
+            <brain:structureid>180</brain:structureid>
+            <brain:structurelabel>MB</brain:structurelabel>
+            <brain:structurename>Midbrain</brain:structurename>
+
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+            <brain:avgdensity>15.5494980812073</brain:avgdensity>
+            <brain:avglevel>24.7716341018677</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#ffa0b0</brain:rgb>
+            <brain:structureid>185</brain:structureid>
+            <brain:structurelabel>MY</brain:structurelabel>
+            <brain:structurename>Medulla</brain:structurename>
+         </brain:gene-expression>
+
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+            <brain:avgdensity>2.36713606119156</brain:avgdensity>
+            <brain:avglevel>2.16845911741257</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+
+            <brain:rgb>#90ff90</brain:rgb>
+            <brain:structureid>228</brain:structureid>
+            <brain:structurelabel>OLF</brain:structurelabel>
+            <brain:structurename>Olfactory bulb</brain:structurename>
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+
+         <brain:gene-expression>
+            <brain:avgdensity>6.92590689659119</brain:avgdensity>
+            <brain:avglevel>10.5322360992432</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#ff9b88</brain:rgb>
+
+            <brain:structureid>237</brain:structureid>
+            <brain:structurelabel>P</brain:structurelabel>
+            <brain:structurename>Pons</brain:structurename>
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+
+            <brain:avgdensity>3.41868138313293</brain:avgdensity>
+            <brain:avglevel>3.55319964885712</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#a0c8b0</brain:rgb>
+            <brain:structureid>241</brain:structureid>
+
+            <brain:structurelabel>PAL</brain:structurelabel>
+            <brain:structurename>Pallidum</brain:structurename>
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+            <brain:avgdensity>6.00059068202972</brain:avgdensity>
+
+            <brain:avglevel>4.76608699560165</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#90ffb0</brain:rgb>
+            <brain:structureid>385</brain:structureid>
+            <brain:structurelabel>RHP</brain:structurelabel>
+
+            <brain:structurename>Retrohippocampal region</brain:structurename>
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+            <brain:avgdensity>1.92158231139183</brain:avgdensity>
+            <brain:avglevel>1.85638903081417</brain:avglevel>
+
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#a0d0e8</brain:rgb>
+            <brain:structureid>317</brain:structureid>
+            <brain:structurelabel>sAMY</brain:structurelabel>
+            <brain:structurename>Striatum-like amygdalar nuclei</brain:structurename>
+
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+            <brain:avgdensity>19.6918849945068</brain:avgdensity>
+            <brain:avglevel>15.3595948219299</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#a0c8e8</brain:rgb>
+            <brain:structureid>342</brain:structureid>
+            <brain:structurelabel>STR</brain:structurelabel>
+            <brain:structurename>Striatum</brain:structurename>
+         </brain:gene-expression>
+
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+            <brain:avgdensity>30.5783700942993</brain:avgdensity>
+            <brain:avglevel>23.7376689910889</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+
+            <brain:rgb>#a0d8e8</brain:rgb>
+            <brain:structureid>343</brain:structureid>
+            <brain:structurelabel>STRd</brain:structurelabel>
+            <brain:structurename>Striatum dorsal region</brain:structurename>
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+
+         <brain:gene-expression>
+            <brain:avgdensity>1.41613155603409</brain:avgdensity>
+            <brain:avglevel>1.12489360570908</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#a0e8e8</brain:rgb>
+
+            <brain:structureid>344</brain:structureid>
+            <brain:structurelabel>STRv</brain:structurelabel>
+            <brain:structurename>Striatum ventral region</brain:structurename>
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-expressions>
+         <brain:gene-expression>
+
+            <brain:avgdensity>4.9171998500824</brain:avgdensity>
+            <brain:avglevel>6.01844763755798</brain:avglevel>
+            <brain:geneid>11210</brain:geneid>
+            <brain:projectcode>0310</brain:projectcode>
+            <brain:rgb>#ff7080</brain:rgb>
+            <brain:structureid>351</brain:structureid>
+
+            <brain:structurelabel>TH</brain:structurelabel>
+            <brain:structurename>Thalamus</brain:structurename>
+         </brain:gene-expression>
+      </brain:gene-expressions>
+      <brain:gene-aliases>
+         <brain:gene-alias>
+            <brain:aliassymbol>Ace</brain:aliassymbol>
+
+            <brain:geneid>11210</brain:geneid>
+         </brain:gene-alias>
+      </brain:gene-aliases>
+      <brain:gene-aliases>
+         <brain:gene-alias>
+            <brain:aliassymbol>AW208573</brain:aliassymbol>
+            <brain:geneid>11210</brain:geneid>
+
+         </brain:gene-alias>
+      </brain:gene-aliases>
+      <brain:gene-aliases>
+         <brain:gene-alias>
+            <brain:aliassymbol>CD143</brain:aliassymbol>
+            <brain:geneid>11210</brain:geneid>
+         </brain:gene-alias>
+      </brain:gene-aliases>
+
+      <brain:gene-aliases>
+         <brain:gene-alias>
+            <brain:aliassymbol>MGC117827</brain:aliassymbol>
+            <brain:geneid>11210</brain:geneid>
+         </brain:gene-alias>
+      </brain:gene-aliases>
+      <brain:gene-aliases>
+         <brain:gene-alias>
+
+            <brain:aliassymbol>somatic</brain:aliassymbol>
+            <brain:geneid>11210</brain:geneid>
+         </brain:gene-alias>
+      </brain:gene-aliases>
+      <brain:gene-aliases>
+         <brain:gene-alias>
+            <brain:aliassymbol>TC1559728</brain:aliassymbol>
+
+            <brain:geneid>11210</brain:geneid>
+         </brain:gene-alias>
+      </brain:gene-aliases>
+   </brain:gene>
+</rdf:RDF>

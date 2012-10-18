@@ -1,0 +1,9 @@
+@prefix s: <http://nodomain/source/> .
+
+# melting points of various elements in Fahrenheit
+
+s:hydrogen <http://nodomain/meltingPoint> "-434.45" .
+
+s:oxygen <http://nodomain/meltingPoint> "-361.82" .
+
+s:copper <http://nodomain/meltingPoint> "1984.32" .

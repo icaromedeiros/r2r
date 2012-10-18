@@ -1,0 +1,144 @@
+# ABA to Wiki mapping
+# Current scope: aba:<xyz> => wiki:<Xyz>
+# Last revision: 09/21/2010
+
+@prefix r2r: <http://www4.wiwiss.fu-berlin.de/bizer/r2r/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mp: <http://www.example.org/smw-lde/smwTransformations/> .
+
+###
+# Gene
+###
+# aba:gene => wiki:Gene
+mp:Gene
+   a r2r:ClassMapping;
+   r2r:prefixDefinitions	"""smwcat: <http://halowiki/ob/category#> .
+   							 smwprop: <http://halowiki/ob/property#> .
+   							 aba: <http://brain-map.org/gene/0.1#> .
+   							 uniprot: <http://purl.uniprot.org/core/> .
+   							 skos: <http://www.w3.org/2004/02/skos/core#> .
+   							 rdfs: <http://www.w3.org/2000/01/rdf-schema#>""";
+   r2r:sourcePattern 	"?SUBJ a aba:gene";
+   r2r:targetPattern	"?SUBJ a smwcat:Gene";
+   .
+# Properties of Gene
+mp:Geneid
+   a r2r:PropertyMapping;
+   r2r:mappingRef    mp:Gene;
+   r2r:sourcePattern 	"?SUBJ aba:geneid ?x";
+   r2r:targetPattern
+   		"?SUBJ smwprop:Geneid ?x";
+   .
+mp:Chromosome
+   a r2r:PropertyMapping;
+   r2r:mappingRef    mp:Gene;
+   r2r:sourcePattern 	"?SUBJ aba:chromosome ?x";
+   r2r:targetPattern
+   		"?SUBJ smwprop:Chromosome ?x";
+   .
+mp:Entrezgeneid
+   a r2r:PropertyMapping;
+   r2r:mappingRef    mp:Gene;
+   r2r:sourcePattern 	"?SUBJ aba:entrezgeneid ?x";
+   r2r:targetPattern
+   		"?SUBJ smwprop:Entrezgeneid ?x";
+   .
+mp:Genename
+   a r2r:PropertyMapping;
+   r2r:mappingRef    mp:Gene;
+   r2r:sourcePattern 	"?SUBJ aba:genename ?x";
+   r2r:targetPattern
+   		"?SUBJ smwprop:Genename ?x";
+   .
+mp:Genesymbol
+   a r2r:PropertyMapping;
+   r2r:mappingRef    mp:Gene;
+   r2r:sourcePattern 	"?SUBJ aba:genesymbol ?x";
+   r2r:targetPattern
+   		"?SUBJ smwprop:Genesymbol ?x";
+   .
+mp:Genesatid
+   a r2r:PropertyMapping;
+   r2r:mappingRef    mp:Gene;
+   r2r:sourcePattern 	"?SUBJ aba:gensatid ?x";
+   r2r:targetPattern
+   		"?SUBJ smwprop:Genesatid ?x";
+   .
+mp:Mgimarkeraccessionid
+   a r2r:PropertyMapping;
+   r2r:mappingRef    mp:Gene;
+   r2r:sourcePattern 	"?SUBJ aba:mgimarkeraccessionid ?x";
+   r2r:targetPattern
+   		"?SUBJ smwprop:Mgimarkeraccessionid ?x";
+   .
+mp:Organism
+   a r2r:PropertyMapping;
+   r2r:mappingRef    mp:Gene;
+   r2r:sourcePattern 	"?SUBJ aba:organism ?x";
+   r2r:targetPattern
+   		"?SUBJ smwprop:Organism ?x";
+   .
+# FIXME check whether projectname is correctly mapped to Projectid
+mp:Projectname
+   a r2r:PropertyMapping;
+   r2r:mappingRef    mp:Gene;
+   r2r:sourcePattern 	"?SUBJ aba:projectname ?x";
+   r2r:targetPattern
+   		"?SUBJ smwprop:Projectid ?x";
+   .
+
+###
+# GeneExpression
+###
+# aba:gene-expression => wiki:GeneExpression
+#mp:GeneExpression
+#   a r2r:ClassMapping;
+#   r2r:mappingRef    mp:Gene;
+#   r2r:prefixDefinitions	"smwcat: <http://halowiki/ob/category#> . smwprop: <http://halowiki/ob/property#> . aba: <http://brain-map.org/gene/0.1#> . uniprot: <http://purl.uniprot.org/core/> . skos: <http://www.w3.org/2004/02/skos/core#> . rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
+#   r2r:sourcePattern 	"?SUBJ a aba:gene-expression";
+#   r2r:targetPattern	"?SUBJ a smwcat:GeneExpression";
+#   .
+# aba:gene-expressions => wiki:hasGeneExpression
+mp:GeneExpression
+   a r2r:PropertyMapping;
+#   r2r:mappingRef    mp:Gene;
+	r2r:prefixDefinitions	"smwcat: <http://halowiki/ob/category#> . smwprop: <http://halowiki/ob/property#> . aba: <http://brain-map.org/gene/0.1#> . uniprot: <http://purl.uniprot.org/core/> . skos: <http://www.w3.org/2004/02/skos/core#> . rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
+   	r2r:sourcePattern
+   		"""?SUBJ a aba:gene .
+   		?SUBJ aba:gene-expressions ?ex .
+   		?ex a aba:gene-expression .
+		?ex aba:avgdensity ?ad .
+		?ex aba:avglevel ?al .
+		?ex aba:geneid ?gi .
+		?ex aba:projectcode ?pc .
+		?ex aba:rgb ?rg .
+		?ex aba:structureid ?si .
+		?ex aba:structurelabel ?sl .
+		?ex aba:structurename ?sn""";
+   r2r:targetPattern
+   		"""?SUBJ smwprop:hasGeneExpression _:b .
+   		_:b a smwcat:GeneExpression .
+		_:b smwprop:Avgdensity ?ad .
+		_:b smwprop:Avglevel ?al .
+		_:b smwprop:Geneid ?gi .
+		_:b smwprop:Projectcode ?pc .
+		_:b smwprop:Rgb ?rg .
+		_:b smwprop:Structureid ?si .
+		_:b smwprop:Structurelabel ?sl .
+		_:b smwprop:Structurename ?sn""";
+   .
+
+###
+# GeneAlias
+###
+# FIXME eventually change this to smwprop:Synonym
+mp:Genealias
+   a r2r:PropertyMapping;
+   r2r:mappingRef    mp:Gene;
+   r2r:sourcePattern
+   		"""?SUBJ aba:gene-aliases ?x .
+   		?x aba:aliassymbol ?s""";
+   r2r:targetPattern
+   		"?SUBJ smwprop:Aliassymbol ?s";
+   .

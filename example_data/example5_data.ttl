@@ -1,0 +1,13 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix s: <http://nodomain/source/> .
+@prefix v: <http://www.w3.org/2006/vcard/ns#> .
+
+s:JohnDoe foaf:firstName "John" ;
+   v:workEmail "john.doe@nodomain" ;
+   v:bday "1900-01-01" ;
+   foaf:lastName "Doe" .
+
+s:JohnSmith foaf:firstName "John" ;
+   foaf:lastName "Smith" ;
+   v:email "john.smith@nodomain" ;
+   a foaf:Person .
